@@ -33,6 +33,10 @@ const calculateOrderAmount = (items) => {
   return +numPatients * package;
 };
 
+app.get("/",(req,res)=>{
+  res.send("Ping")
+})
+
 app.post("/create-payment-intent", async (req, res) => {
   const { items } = req.body;
 
